@@ -18,10 +18,8 @@ h1, h3, span{
 h1{
     font-size: 30pt;
 }
+
 ol{
-    list-style: decimal inside;
-}
-ul{
     list-style: decimal inside;
 }
 ul {
@@ -57,7 +55,7 @@ div.header, div.instructions{
 }
 
 #blue{
-    color: #3092c7
+    color: #3092c7;
 }
 
 #green{
@@ -65,7 +63,7 @@ div.header, div.instructions{
 }
 
 #red{
-    color: #ec4b5f
+    color: #ec4b5f;
 }
 
 #yellow{

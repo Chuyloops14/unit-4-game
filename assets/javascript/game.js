@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$( document ).ready(function(){
     var Random=Math.floor(Math.radnom()*101+19)
 
     $('#randomNumber').text(Random);
@@ -12,30 +12,30 @@ $(document).ready(function(){
     var wins= 0;
     var losses= 0;
 
-$('#numberWins=').text(wins);
-$('#nymberLosses').text(losses);
+$('#numberWins').text(wins);
+$('#numberLosses').text(losses);
 
 function reset(){
     Random=Math.floor(Math.random()*101+19);
     console.log(Random)
     $('#randomNumber').text(Random);
-    num1= Math.floor(Math.Random()*11+1);
-    num2= Math.floor(Math.Random()*11+1);
-    num3= Math.floor(Math.Random()*11+1);
-    num4= Math.floor(Math.Random()*11+1);
+    num1= Math.floor(Math.random()*11+1);
+    num2= Math.floor(Math.random()*11+1);
+    num3= Math.floor(Math.random()*11+1);
+    num4= Math.floor(Math.random()*11+1);
     userTotal= 0;
     $('#finalTotal').text(userTotal);
     }
 
 function yay(){
-    alert("You won!");
+alert("You won!");
     wins++;
     $('#numberWins').text(wins);
     reset();
 }
 
 function loser(){
-    alert ("You lose!");
+alert ("You lose!");
     losses++;
     $('#numberLosses').text(losses);
     reset()
@@ -67,12 +67,12 @@ $('#two').on ('click', function(){
 
 $('#three').on ('click', function(){
     userTotal = userTotal+ num3;
-    console.log("new userTotal=" + userTotal);
-    $('fineTotal').text(userTotal);
+    console.log("new userTotal= " + userTotal);
+    $('finalTotal').text(userTotal);
       if (userTotal == Random){
         yay();
      }
-     else if ( userTotal == Random){
+     else if ( userTotal > Random){
         loser();
      }
 })
